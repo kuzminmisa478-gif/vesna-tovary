@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Весенняя закупка из Китая</title>
+<meta name="description" content="50 мелких и лёгких товаров из Китая под весенний спрос на Wildberries и Ozon: закупка на 1688, цена на маркетплейсе, наценка, пик продаж.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Весенняя закупка из Китая: 50 товаров</h1>
+    <p class="lead">Мелкие и лёгкие товары под спрос марта–мая на Wildberries и Ozon. Отметьте галочкой интересные позиции, затем нажмите «Скопировать отобранные». Цены — ориентиры для отбора, перед закупкой их нужно проверить в аналитике (MPStats и аналоги) и у поставщика.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact">Пик продаж: <b>март–май</b></div>
+    <div class="fact">Заказывать: <b>ноябрь–январь</b>, чтобы товар был на складе к началу марта</div>
+    <div class="fact">Хороший ориентир: <b>×4 и выше</b> к цене 1688</div>
+  </div>
+
+  <div class="bar">
+    <div class="chips" id="chips"></div>
+    <div class="tools">
+      <div class="left">
+        <select id="sort" aria-label="Сортировка">
+          <option value="num">По порядку</option>
+          <option value="mk">По наценке</option>
+          <option value="price">По цене на МП</option>
+          <option value="peak">По месяцу пика</option>
+        </select>
+        <label class="only"><input type="checkbox" id="only"> только отобранные</label>
+      </div>
+      <div class="left">
+        <span class="count">Отобрано: <b id="cnt">0</b> / 50</span>
+        <button class="btn" id="clear">Сбросить</button>
+        <button class="btn primary" id="copy">Скопировать отобранные</button>
+      </div>
+    </div>
+  </div>
+
+  <textarea class="out" id="out" hidden readonly aria-label="Список отобранных товаров"></textarea>
+
+  <div class="list" id="list"></div>
+
+  <section class="notes">
+    <h2>Как читать цифры</h2>
+    <ul>
+      <li>«Закупка» — типичная оптовая цена на 1688 в юанях. «Цена на МП» — диапазон, в котором товар обычно продаётся на WB/Ozon.</li>
+      <li>«Наценка» — цена на МП (середина диапазона) к цене 1688 при курсе около 11,5 ₽ за юань. Это ещё до карго, комиссии маркетплейса (обычно 20–35%), логистики, рекламы и налогов. Ниже ×4 позиция обычно живёт только на объёме.</li>
+      <li>Детские товары, электрика и всё, что контактирует с кожей или едой, требует декларации или сертификата ТР ТС. Текстиль и аксессуары проверьте на обязательную маркировку «Честный знак».</li>
+      <li>Ориентир по спросу: в первые недели марта 2026 года Ozon фиксировал рост продаж ароматизаторов для дома в 15 раз, рамок в 8 раз, искусственных цветов в 3 раза, удочек в 5 раз, товаров для хобби в 2–2,3 раза, хозтоваров для уборки в 2,5–3 раза. <a href="https://www.retail.ru/news/ozon-poteplenie-privelo-k-rostu-sprosa-na-sezonnye-tovary-18-marta-2026-275647/" target="_blank" rel="noopener">Источник</a></li>
+    </ul>
+  </section>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
